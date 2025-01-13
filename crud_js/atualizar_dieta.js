@@ -1,4 +1,4 @@
-const apiUrl = 'https://sua-api.com/dietas'; // Substitua pela URL base da sua API
+const apiUrl = 'https://vivaleveapi.onrender.com/dietas/dietas'; // Substitua pela URL base da sua API
 const updateDietForm = document.getElementById('updateDietForm');
 const message = document.getElementById('message');
 

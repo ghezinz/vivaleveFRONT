@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function carregarDietasFavoritadas(authToken) {
-    fetch("http://127.0.0.1:8000/favoritos/favoritos/dietas", {
+    fetch("https://vivaleveapi.onrender.com/favoritos/favoritos/dietas", {
         method: "GET",
         headers: {
             "Authorization": `Bearer ${authToken}`

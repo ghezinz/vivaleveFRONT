@@ -1,4 +1,4 @@
-const apiUrl = 'http://127.0.0.1:8000/dietas/dietas'; // Substitua pela URL base da sua API
+const apiUrl = 'https://vivaleveapi.onrender.com/dietas/dietas'; // Substitua pela URL base da sua API
 const deleteDietaForm = document.getElementById('deleteDietaForm');
 const message = document.getElementById('message');
 

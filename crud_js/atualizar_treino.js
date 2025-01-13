@@ -1,4 +1,4 @@
-const apiUrl = 'http://127.0.0.1:8000/treinos/treinos'; // Substitua pela URL base da sua API
+const apiUrl = 'https://vivaleveapi.onrender.com/treinos/treinos'; // Substitua pela URL base da sua API
 const updateForm = document.getElementById('updateTreinoForm');
 const message = document.getElementById('message');
 

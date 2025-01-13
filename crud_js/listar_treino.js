@@ -1,5 +1,5 @@
  // URL da API
- const apiUrl = 'http://127.0.0.1:8000/treinos/treinos'; // Substitua pela URL da sua API
+ const apiUrl = 'https://vivaleveapi.onrender.com/treinos/treinos'; // Substitua pela URL da sua API
 
  // Referências aos elementos da página
  const listarTreinosBtn = document.getElementById('listarTreinos');

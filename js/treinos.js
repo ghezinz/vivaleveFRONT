@@ -11,7 +11,7 @@ function verificarLogin() {
     }
 
     // Verifica se o token é válido
-    fetch("http://127.0.0.1:8000/users/me", {
+    fetch("https://vivaleveapi.onrender.com/users/me", {
         method: "GET",
         headers: {
             "Authorization": `Bearer ${authToken}`,

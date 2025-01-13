@@ -1,5 +1,5 @@
   // URL da API
-  const apiUrl = 'http://127.0.0.1:8000/users/users'; // Substitua pela URL da sua API
+  const apiUrl = 'https://vivaleveapi.onrender.com/users/users'; // Substitua pela URL da sua API
 
   // Referência ao formulário e mensagem
   const form = document.getElementById('deleteForm');

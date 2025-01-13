@@ -27,7 +27,7 @@ document.getElementById('formCadastro').addEventListener('submit', async functio
     }
   
     try {
-      const response = await fetch('http://127.0.0.1:8000/users/signup', {
+      const response = await fetch('https://vivaleveapi.onrender.com/users/signup', {
         method: 'POST',
         body: formData,
       });

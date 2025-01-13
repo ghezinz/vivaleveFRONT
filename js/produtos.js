@@ -4,7 +4,7 @@ function voltarParaHome() {
 }
 
 function carregarProdutos() {
-    fetch("http://127.0.0.1:8000/produtos/produtos", {
+    fetch("https://vivaleveapi.onrender.com/produtos/produtos", {
         method: "GET",
         // Não há mais a necessidade de incluir o token, pois não requer autenticação
         headers: {

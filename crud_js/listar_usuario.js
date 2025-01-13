@@ -1,5 +1,5 @@
 document.getElementById('listarUsuarios').addEventListener('click', async () => {
-    const apiUrl = 'http://127.0.0.1:8000/users/users'; // Defina aqui a URL da API
+    const apiUrl = 'https://vivaleveapi.onrender.com/users/users'; // Defina aqui a URL da API
     const errorMessage = document.getElementById('error-message');
     const usuariosTable = document.getElementById('usuariosTable');
     const tbody = usuariosTable.querySelector('tbody');

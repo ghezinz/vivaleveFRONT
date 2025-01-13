@@ -1,4 +1,4 @@
-const apiUrl = 'http://127.0.0.1:8000/produtos/produtos'; // Substitua pela URL base da sua API
+const apiUrl = 'https://vivaleveapi.onrender.com/produtos/produtos'; // Substitua pela URL base da sua API
 const productForm = document.getElementById('productForm');
 const message = document.getElementById('message');
 

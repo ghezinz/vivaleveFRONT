@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
     }
 
-    fetch("http://127.0.0.1:8000/treinos/treinos", {
+    fetch("https://vivaleveapi.onrender.com/treinos/treinos", {
         method: "GET",
         headers: {
             "Authorization": `Bearer ${authToken}`,
