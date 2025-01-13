@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Verificar se o token é válido
-    fetch("http://127.0.0.1:8000/auth/verificar-token", {
+    fetch("https://vivaleveapi.onrender.com/auth/verificar-token", {
         method: "GET",
         headers: {
             "Authorization": `Bearer ${authToken}`
