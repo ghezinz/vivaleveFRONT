@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Viva Leve - Página Principal</title>
+  <link rel="stylesheet" href="./css/index.css">
+  <link rel="stylesheet" href="./css/global.css">
+</head>
+<body>
+  <header>
+    <div class="logo">Viva Leve</div>
+    <nav>
+      <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="treinos.html">Treinos</a></li>
+        <li><a href="dietas.html">Dieta</a></li>
+        <li><a href="sobre.html">Sobre Nós</a></li>
+        <li><a href="contato.html">Contato</a></li>
+        <li id="favoritosLink" style="display: none;"><a href="favoritos.html">Favoritos</a></li>
+        <li id="adminLink" style="display: none;"><a href="admin.html">Painel Admin</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="carousel-container">
+    <div class="carousel-track" id="carouselTrack">
+        <div class="carousel-image"><img src="img/image5.jpg" alt="Imagem Fantasma" onclick="irParaProdutos()"></div>
+        <div class="carousel-image"><img src="img/image1.jpg" alt="Imagem 1" onclick="irParaProdutos()"></div>
+        <div class="carousel-image"><img src="img/image2.jpg" alt="Imagem 2" onclick="irParaProdutos()"></div>
+        <div class="carousel-image"><img src="img/image3.jpg" alt="Imagem 3" onclick="irParaProdutos()"></div>
+        <div class="carousel-image"><img src="img/image4.jpg" alt="Imagem 4" onclick="irParaProdutos()"></div>
+        <div class="carousel-image"><img src="img/image5.jpg" alt="Imagem 5" onclick="irParaProdutos()"></div>
+        <div class="carousel-image"><img src="img/image1.jpg" alt="Imagem Fantasma"></div>
+    </div>
+  </div>
+  
+  <section class="botoes">
+    <a href="calcular-tmb.html">Calcule sua TMB</a>
+    <a href="calcular-peso.html">Descubra seu Peso Ideal</a>
+  </section>
+
+  <footer id="noAccountFooter">
+    <p>Não tem conta? <a href="cadastro.html">Cadastre-se aqui</a></p>
+  </footer>
+  <footer id="hasAccountFooter">  
+    <p>Já tem conta? <a href="login.html">Faça seu Login Aqui</a></p>
+  </footer>
+  <script src="js/index.js"></script>
+</body>
+</html>

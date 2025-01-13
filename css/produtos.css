@@ -1,0 +1,83 @@
+/* Estilização o Container dos Produtos */
+
+.produtos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px auto;
+  }
+  
+  .produto {
+    background-color: #374546;
+    width: 300px;
+    text-align: center;
+    border: 1px solid #000000;
+    padding: 10px;
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .produto img {
+    max-width: 100%;
+    border-radius: 10px;
+  }
+
+  /* Estilização das Animações */
+  
+  .produto:hover {
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .produto button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .produto button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Estilização do Texto */
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #000000;
+  }
+
+  h2 {
+    color: #00f7ff;
+  }
+
+  p {
+    color: blanchedalmond;
+  }
+
+  header {
+    text-align: center;
+  }
+
+  .btn-voltar {
+    text-align: center;
+    display: inline-flex;
+    margin: 10px 0;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  
+  .btn-voltar:hover {
+    background-color: #45a049;
+  }
+  

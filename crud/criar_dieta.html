@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar Dieta</title>
+    <link rel="stylesheet" href="/administrador_css/crud.css">
+</head>
+<body>
+    <h1>Criar Dieta</h1>
+    <form id="dietaForm">
+        <label for="nome">Nome da Dieta</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <label for="tipo">Tipo</label>
+        <input type="text" id="tipo" name="tipo" required>
+
+        <label for="descricao">Descrição</label>
+        <textarea id="descricao" name="descricao" rows="4" required></textarea>
+
+        <label for="consumoCaloria">Consumo Calórico</label>
+        <input type="number" id="consumoCaloria" name="consumo_caloria" required>
+
+        <label for="imagem">Imagem</label>
+        <input type="file" id="imagem" name="imagem" accept="image/*">
+
+        <button type="submit">Criar Dieta</button>
+    </form>
+    <div id="message"></div>
+
+    <script src="/crud_js/criar_dieta.js"></script>
+</body>
+</html>

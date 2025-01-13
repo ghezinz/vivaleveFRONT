@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerencie Dietas</title>
+    <link rel="stylesheet" href="/administrador_css/gerenciar_dietas.css">
+    <link rel="stylesheet" href="/css/global.css">
+</head>
+<body>
+    <header>
+        <h1>Gerencie Dietas</h1>
+        <button onclick="voltarParaHome()" class="btn-voltar">Voltar para Home</button>
+    </header>
+    <div class="container">
+        <div class="dashboard">
+            <div class="card">
+                <h3>Listar Dietas</h3>
+                <p>veja todos as dietas registradas.</p>
+                <button onclick="ListarDieta()" class="btn-listar">Listar Dietas</button>
+            </div>
+
+            <div class="card">
+                <h3>Criar Dietas</h3>
+                <p>crie dietas.</p>
+                <button onclick="CriarDieta()" class="btn-listar">Criar Dietas</button>
+            </div>
+
+            <div class="card">
+                <h3>Atualize Dietas</h3>
+                <p>edite informações de Dietas</p>
+                <button onclick="AtualizarDieta()" class="btn-atualizar">Atualizar Dietas</button>
+            </div>
+
+            <div class="card">
+                <h3>Deletar Dietas</h3>
+                <p>exclua Dietas.</p>
+                <button onclick="DeletarDieta()" class="btn-deletar">Deletar Dietas</button>
+            </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; Gerencia de Dietas.</p>
+    </footer>
+</body>
+</html>
+
+    <script src="/administrador_js/gerenciar_dietas.js"></script>
+</body>
+</html>

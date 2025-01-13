@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerencie Usuarios</title>
+    <link rel="stylesheet" href="/administrador_css/gerenciar_usuarios.css">
+    <link rel="stylesheet" href="/css/global.css">
+</head>
+<body>
+    <header>
+        <h1>Gerencie Usuarios</h1>
+        <button onclick="voltarParaHome()" class="btn-voltar">Voltar para Home</button>
+    </header>
+    <div class="container">
+        <div class="dashboard">
+            <!-- Listar usuarios -->
+            <div class="card">
+                <h3>Listar Usuarios</h3>
+                <p>veja todos os usuarios registrados.</p>
+                <button onclick="ListarUsuario()" class="btn-listar">ListarUsuario</button>
+            </div>
+            <!-- Deletar Usuários -->
+            <div class="card">
+                <h3>Deletar Usuarios</h3>
+                <p>exclua usuários.</p>
+                <button onclick="DeletarUsuario()" class="btn-deletar">DeletarUsuario</button>
+            </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; Gerencia de Usuarios.</p>
+    </footer>
+</body>
+</html>
+
+    <script src="/administrador_js/gerenciar_usuarios.js"></script>
+</body>
+</html>

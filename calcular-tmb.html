@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calcular TMB - Viva Leve</title>
+  <link rel="stylesheet" href="./css/calcular-tmb.css">
+  <link rel="stylesheet" href="./css/global.css">
+</head>
+<body>
+  <header>
+    <div class="logo">Viva Leve</div>
+    <nav>
+      <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="treinos.html">Treinos</a></li>
+        <li><a href="dietas.html">Dieta</a></li>
+        <li><a href="sobre.html">Sobre Nós</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Calcule sua Taxa Metabólica Basal (TMB)</h2>
+    <form id="formTMB">
+      <label for="peso">Peso (em kg):</label>
+      <input type="number" id="peso" name="peso" placeholder="Digite seu peso" required>
+
+      <label for="altura">Altura (em cm):</label>
+      <input type="number" id="altura" name="altura" placeholder="Digite sua altura" required>
+
+      <label for="idade">Idade:</label>
+      <input type="number" id="idade" name="idade" placeholder="Digite sua idade" required>
+
+      <label for="sexo">Sexo:</label>
+      <select id="sexo" name="sexo" required>
+        <option value="masculino">Masculino</option>
+        <option value="feminino">Feminino</option>
+      </select>
+
+      <button type="submit">Calcular</button>
+    </form>
+
+    <p id="resultadoTMB" style="margin-top: 20px; color: green;"></p>
+  </main>
+
+  <script src="js/calculo-tmb.js"></script>
+</body>
+</html>
+
+

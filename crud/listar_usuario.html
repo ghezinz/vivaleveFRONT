@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listar Usuários</title>
+    <link rel="stylesheet" href="/administrador_css/crud.css">
+</head>
+<body>
+    <div>
+        <button id="listarUsuarios">Listar Usuários</button>
+    </div>
+    <p id="error-message" style="color: red;"></p>
+    <table id="usuariosTable" style="display: none; border-collapse: collapse; width: 100%;">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Email</th>
+                <th>Usuário</th>
+                <th>Imagem</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    
+    <script src="/crud_js/listar_usuario.js"></script>
+
+</body>
+</html>

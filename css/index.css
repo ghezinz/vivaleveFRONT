@@ -1,0 +1,86 @@
+/* Estilização do Carrosel de Imagens */
+
+section.carrossel {
+  margin: 20px 0;
+  text-align: center;
+  width: 100%;
+  max-width: 900px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+section.carrossel img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 8px;
+}
+
+/* Estilização Adicionais */
+
+.carousel-container {
+  margin-top: 40px;
+  margin-bottom: 60px;
+  width: 260px; /* Reduzindo o tamanho da largura do carrossel */
+  overflow: hidden;
+  border-radius: 8px;
+  position: relative;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-image {
+  flex-shrink: 0;
+  width: 260px; /* Correspondendo à largura do contêiner */
+}
+
+img {
+  width: 260px !important;
+  height: 260px !important;
+  display: block;
+  border-radius: 5px; /* Adicionando bordas arredondadas às imagens */
+}
+
+/* Estilização dos Botões */
+
+section.botoes {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+section.botoes a {
+  display: inline-block;
+  padding: 15px 20px;
+  background-color: #007BFF;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+section.botoes a:hover {
+  background-color: #0056b3;
+}
+
+/* Estilização do Rodapé */
+
+footer {
+  margin-top: 20px;
+  text-align: center;
+}
+
+footer a {
+  color: #007BFF;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}

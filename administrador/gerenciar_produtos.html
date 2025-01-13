@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerencie Produtos</title>
+    <link rel="stylesheet" href="/administrador_css/gerenciar_produtos.css">
+    <link rel="stylesheet" href="/css/global.css">
+</head>
+<body>
+    <header>
+        <h1>Gerencie Produtos</h1>
+        <button onclick="voltarParaHome()" class="btn-voltar">Voltar para Home</button>
+    </header>
+    <div class="container">
+        <div class="dashboard">
+            <div class="card">
+                <h3>Listar Produtos</h3>
+                <p>veja todos os produtos registrados.</p>
+                <button onclick="ListarProduto()" class="btn-listar">Listar Produtos</button>
+            </div>
+
+            <div class="card">
+                <h3>Criar Produtos</h3>
+                <p>crie Produtos.</p>
+                <button onclick="CriarProduto()" class="btn-listar">Criar Produtos</button>
+            </div>
+
+            <div class="card">
+                <h3>Atualize Produtos</h3>
+                <p>edite informações de produtos</p>
+                <button onclick="AtualizarProduto()" class="btn-atualizar">Atualizar Produtos</button>
+            </div>
+
+            <div class="card">
+                <h3>Deletar Produtos</h3>
+                <p>exclua Produtos.</p>
+                <button onclick="DeletarProduto()" class="btn-deletar">Deletar Produtos</button>
+            </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; Gerencia de Produtos.</p>
+    </footer>
+</body>
+</html>
+
+    <script src="/administrador_js/gerenciar_produtos.js"></script>
+</body>
+</html>

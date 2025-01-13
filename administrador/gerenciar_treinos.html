@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerencie Treinos</title>
+    <link rel="stylesheet" href="/administrador_css/gerenciar_treinos.css">
+    <link rel="stylesheet" href="/css/global.css">
+</head>
+<body>
+    <header>
+        <h1>Gerencie Treinos</h1>
+        <button onclick="voltarParaHome()" class="btn-voltar">Voltar para Home</button>
+    </header>
+    <div class="container">
+        <div class="dashboard">
+            <div class="card">
+                <h3>Listar Treinos</h3>
+                <p>veja todos os treinos registrados.</p>
+                <button onclick="ListarTreino()" class="btn-listar">Listar Treinos</button>
+            </div>
+
+            <div class="card">
+                <h3>Criar Treinos</h3>
+                <p>crie treinos personalizados.</p>
+                <button onclick="CriarTreino()" class="btn-listar">Criar Treinos</button>
+            </div>
+
+            <div class="card">
+                <h3>Atualize Treinos</h3>
+                <p>edite informações de treinos</p>
+                <button onclick="AtualizarTreino()" class="btn-atualizar">Atualizar Treinos</button>
+            </div>
+
+            <div class="card">
+                <h3>Deletar Treinos</h3>
+                <p>exclua treinos.</p>
+                <button onclick="DeletarTreino()" class="btn-deletar">Deletar Treinos</button>
+            </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; Gerencia de Treinos.</p>
+    </footer>
+</body>
+</html>
+
+    <script src="/administrador_js/gerenciar_treinos.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro - Viva Leve</title>
+  <link rel="stylesheet" href="./css/cadastro.css">
+  <link rel="stylesheet" href="./css/global.css">
+</head>
+<body>
+  <header>
+    <div class="logo">Viva Leve</div>
+    <nav>
+      <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cadastro.html" onclick="alertarCadastro()">Treinos</a></li>
+        <li><a href="cadastro.html" onclick="alertarCadastro()">Dieta</a></li>
+        <li><a href="sobre.html">Sobre Nós</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Cadastro de Usuário</h2>
+    <form id="formCadastro">
+      <label for="nome">Nome Completo:</label>
+      <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
+
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+
+      <label for="username">Nome de Usuário:</label>
+      <input type="text" id="username" name="username" placeholder="Digite seu nome de usuário" required>
+
+      <label for="senha">Senha:</label>
+      <input type="password" id="senha" name="senha" placeholder="Crie uma senha" required>
+
+      <label for="confirmarSenha">Confirmar Senha:</label>
+      <input type="password" id="confirmarSenha" name="confirmarSenha" placeholder="Confirme sua senha" required>
+
+      <label for="img">Foto de Perfil (opcional):</label>
+      <input type="file" id="img" name="img" accept="image/*">
+
+      <button type="submit">Cadastrar</button>
+    </form>
+
+    <p id="mensagem" style="margin-top: 20px;"></p>
+  </main>
+
+  <script src="js/cadastro.js"></script>
+</body>
+</html>
