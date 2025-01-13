@@ -11,9 +11,10 @@ document.getElementById('formLogin').addEventListener('submit', async function (
         const response = await fetch('https://vivaleveapi.onrender.com/users/signin', {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json',
+                'Content-Type': 'application/json',  
             },
             body: JSON.stringify({ username, password }),
+            mode: 'cors',  // Garantindo que o CORS seja permitido
         });
   
         if (response.ok) {
