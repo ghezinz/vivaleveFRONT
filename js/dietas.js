@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Verifica o token na API
-    fetch("https://ghezinz.github.io/vivaleveFRONT//auth/verificar-token", {
+    fetch("https://vivaleveapi.onrender.com/auth/verificar-token", {
         method: "GET",
         headers: {
             "Authorization": `Bearer ${authToken}`
