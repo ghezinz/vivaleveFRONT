@@ -62,6 +62,6 @@ document.addEventListener("DOMContentLoaded", async () => {
   
     // Carregar favoritos
     carregarFavoritos("https://vivaleveapi.onrender.com/favoritos/favoritos/treinos", treinosList);
-    carregarFavoritos("https://vivaleveapi.onrender.com/favoritos/dietas", dietasList);
+    carregarFavoritos("https://vivaleveapi.onrender.com/favoritos/favoritos/dietas", dietasList);
   });
   
