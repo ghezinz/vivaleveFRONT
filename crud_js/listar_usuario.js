@@ -37,7 +37,7 @@ async function listarUsuarios() {
             usuarios.forEach(usuario => {
                 const row = document.createElement('tr');
                 row.innerHTML = `
-                    <td>${usuario.nome}</td>
+                    <td>${usuario.name}</td>
                     <td>${usuario.email}</td>
                     <td>${usuario.username}</td>
                 `;
