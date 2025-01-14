@@ -12,7 +12,7 @@ function DeletarTreino() {
 }
 
 function voltarParaHome() {
-    window.location.href = "/vivaleveFRONT/crud/index.html";
+    window.location.href = "/vivaleveFRONT/index.html";
   }
 
 
