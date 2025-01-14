@@ -1,21 +1,21 @@
 function ListarUsuario() {
-    window.location.href = "../crud/listar_usuario.html";
+    window.location.href = "/vivaleveFRONT/crud/listar_usuario.html";
 }
 function AtualizarUsuario() {
-    window.location.href = "../crud/atualizar_usuario.html";
+    window.location.href = "/vivaleveFRONT/crud/atualizar_usuario.html";
 }
 function DeletarUsuario() {
-    window.location.href = "../crud/deletar_usuario.html";
+    window.location.href = "/vivaleveFRONT/crud/deletar_usuario.html";
 }
 
 function voltarParaHome() {
-    window.location.href = "../index.html";
+    window.location.href = "/vivaleveFRONT/crud/index.html";
   }
 
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('user-form');
     const userList = document.getElementById('users');
-    const apiBaseURL = 'http://127.0.0.1:8000/users/users'; // Substitua pela URL da sua API
+    const apiBaseURL = 'https://vivaleveapi.onrender.com/users/users'; // Substitua pela URL da sua API
 
     // Função para renderizar os usuários na lista
     async function fetchAndRenderUsers() {
