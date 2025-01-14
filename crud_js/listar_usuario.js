@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const apiUrl = 'https://vivaleveapi.onrender.com/users/users'; // Substitua pela URL correta da sua API
+    const apiUrl = 'https://vivaleveapi.onrender.com/users/users';
     const listarButton = document.getElementById('listarUsuarios');
     const usuariosTable = document.getElementById('usuariosTable').querySelector('tbody');
     const message = document.getElementById('message');
@@ -8,11 +8,19 @@ document.addEventListener('DOMContentLoaded', () => {
         message.textContent = ''; // Limpa mensagens anteriores
         usuariosTable.innerHTML = ''; // Limpa a tabela antes de adicionar novos dados
 
+        const token = sessionStorage.getItem('authenticated');
+        if (!token) {
+            alert('Sessão expirada. Faça login novamente.');
+            window.location.href = '/login.html';
+            return;
+        }
+
         try {
             const response = await fetch(apiUrl, {
                 headers: {
-                    Authorization: `Bearer ${sessionStorage.getItem('authenticated')}`
-                }
+                    Authorization: `Bearer ${token}`,
+                    'Content-Type': 'application/json',
+                },
             });
 
             if (response.ok) {
@@ -38,9 +46,14 @@ document.addEventListener('DOMContentLoaded', () => {
                     usuariosTable.appendChild(row);
                 });
             } else {
-                const errorData = await response.json();
-                message.style.color = 'red';
-                message.textContent = `Erro ao listar usuários: ${errorData.detail || 'Erro desconhecido'}`;
+                if (response.status === 401) {
+                    alert('Sessão expirada. Faça login novamente.');
+                    window.location.href = '/login.html';
+                } else {
+                    const errorData = await response.json();
+                    message.style.color = 'red';
+                    message.textContent = `Erro ao listar usuários: ${errorData.detail || 'Erro desconhecido'}`;
+                }
             }
         } catch (error) {
             message.style.color = 'red';
