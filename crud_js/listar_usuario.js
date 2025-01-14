@@ -2,6 +2,9 @@ const apiUrl = 'https://vivaleveapi.onrender.com/users/users'; // URL da API
 const usuariosTableBody = document.querySelector('#usuariosTable tbody');
 const message = document.getElementById('error-message');
 
+// Obtém o token do localStorage
+const token = localStorage.getItem('authtoken');
+
 // Função para listar usuários
 async function listarUsuarios() {
     message.textContent = ''; // Limpa mensagens anteriores
@@ -10,6 +13,9 @@ async function listarUsuarios() {
     try {
         const response = await fetch(apiUrl, {
             method: 'GET',
+            headers: {
+                'Authorization': `Bearer ${token}`,
+            },
         });
 
         if (response.ok) {
@@ -35,7 +41,7 @@ async function listarUsuarios() {
 
             document.getElementById('usuariosTable').style.display = 'table'; // Exibe a tabela
         } else {
-            message.textContent = 'Erro ao listar usuários. Tente novamente.';
+            message.textContent = 'Erro ao listar usuários. Verifique o token de autenticação.';
         }
     } catch (error) {
         message.textContent = `Erro: ${error.message}`;
