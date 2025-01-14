@@ -1,19 +1,20 @@
 function gerenciarProdutos() {
-    window.location.href = "../administrador/gerenciar_produtos.html";
+    window.location.href = "/vivaleveFRONT/administrador/gerenciar_produtos.html";
 }
 function gerenciarUsuarios() {
-    window.location.href = "../administrador/gerenciar_usuarios.html";
+    window.location.href = "/vivaleveFRONT/administrador/gerenciar_usuarios.html";
 }
 function gerenciarTreinos() {
-    window.location.href = "../administrador/gerenciar_treinos.html";
+    window.location.href = "/vivaleveFRONT/administrador/gerenciar_treinos.html";
 }
 function gerenciarDietas() {
-    window.location.href = "../administrador/gerenciar_dietas.html";
+    window.location.href = "/vivaleveFRONT/administrador/gerenciar_dietas.html";
 }
 
 function voltarParaHome() {
-    window.location.href = "index.html";
-  }
+    window.location.href = "/vivaleveFRONT/index.html";
+}
+
 
 // Verificar o token para determinar se é admin
 const token = sessionStorage.getItem('authenticated');
