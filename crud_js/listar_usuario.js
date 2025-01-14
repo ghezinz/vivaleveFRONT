@@ -8,17 +8,17 @@ document.addEventListener('DOMContentLoaded', () => {
         message.textContent = ''; // Limpa mensagens anteriores
         usuariosTable.innerHTML = ''; // Limpa a tabela antes de adicionar novos dados
 
-        const token = sessionStorage.getItem('authenticated');
+        const token = sessionStorage.getItem('authToken');
         if (!token) {
             alert('Sessão expirada. Faça login novamente.');
-            window.location.href = '/login.html';
+            window.location.href = '/vivaleveFRONT/login.html';
             return;
         }
 
         try {
             const response = await fetch(apiUrl, {
                 headers: {
-                    Authorization: `Bearer ${token}`,
+                    Authorization: `Bearer ${authToken}`,
                     'Content-Type': 'application/json',
                 },
             });
