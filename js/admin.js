@@ -28,7 +28,7 @@ if (token) {
 }
 
 // URL da API
-const apiURL = "https://vivaleveapi.onrender.com/produtos";
+const apiURL = "https://vivaleveapi.onrender.com/produtos/produtos";
 
 // Elemento onde os produtos serão inseridos
 const produtosContainer = document.getElementById("produtos-container");
