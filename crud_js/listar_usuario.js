@@ -1,46 +1,50 @@
-document.getElementById('listarUsuarios').addEventListener('click', async () => {
-    const apiUrl = 'https://vivaleveapi.onrender.com/users/users'; // Defina aqui a URL da API
-    const errorMessage = document.getElementById('error-message');
-    const usuariosTable = document.getElementById('usuariosTable');
-    const tbody = usuariosTable.querySelector('tbody');
+const apiUrl = 'https://vivaleveapi.onrender.com/users/users';
+const token = sessionStorage.getItem('authenticated'); // Pegue o token armazenado na sessão
 
-    // Limpa mensagens de erro e tabela
-    errorMessage.textContent = '';
-    tbody.innerHTML = '';
-    usuariosTable.style.display = 'none';
+async function listarUsuarios() {
+    const message = document.getElementById('message');
+    const usuariosTable = document.getElementById('usuariosTable').querySelector('tbody');
+    message.textContent = ''; // Limpa mensagens anteriores
+    usuariosTable.innerHTML = ''; // Limpa a tabela antes de adicionar novos dados
 
     try {
-        const response = await fetch(apiUrl);
-        if (!response.ok) {
-            throw new Error(`Erro ao buscar usuários: ${response.statusText}`);
-        }
-        const usuarios = await response.json();
-
-        if (usuarios.length === 0) {
-            errorMessage.textContent = 'Nenhum usuário encontrado.';
-            return;
-        }
-
-        usuarios.forEach(user => {
-            const row = document.createElement('tr');
-            row.innerHTML = `
-                <td>${user.id}</td>
-                <td>${user.name}</td>
-                <td>${user.email}</td>
-                <td>${user.username}</td>
-                <td>
-                    <img 
-                        src="${user.image || 'https://via.placeholder.com/50'}" 
-                        alt="Imagem de ${user.name}" 
-                        style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;"
-                    >
-                </td>
-            `;
-            tbody.appendChild(row);
+        const response = await fetch(apiUrl, {
+            method: 'GET',
+            headers: {
+                'Authorization': `Bearer ${token}`, // Enviar o token no cabeçalho
+                'Content-Type': 'application/json',
+            },
         });
 
-        usuariosTable.style.display = 'table';
+        if (response.ok) {
+            const usuarios = await response.json();
+            
+            if (usuarios.length === 0) {
+                message.style.color = 'blue';
+                message.textContent = 'Nenhum usuário encontrado.';
+                return;
+            }
+
+            usuarios.forEach(usuario => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${usuario.id}</td>
+                    <td>${usuario.nome}</td>
+                    <td>${usuario.email}</td>
+                    <td>${usuario.role}</td>
+                `;
+                usuariosTable.appendChild(row);
+            });
+        } else {
+            const errorData = await response.json();
+            message.style.color = 'red';
+            message.textContent = `Erro ao listar usuários: ${errorData.detail || 'Erro desconhecido'}`;
+        }
     } catch (error) {
-        errorMessage.textContent = `Erro: ${error.message}`;
+        message.style.color = 'red';
+        message.textContent = `Erro: ${error.message}`;
     }
-});
+}
+
+// Chama a função ao carregar a página
+listarUsuarios();

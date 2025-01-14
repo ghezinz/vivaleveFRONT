@@ -5,7 +5,7 @@ function CriarTreino() {
     window.location.href = "/vivaleveFRONT/crud/criar_treino.html";
 }
 function AtualizarTreino() {
-    window.location.href = "/vivaleveFRONT/crud/crud/atualizar_treino.html";
+    window.location.href = "/vivaleveFRONT/crud/atualizar_treino.html";
 }
 function DeletarTreino() {
     window.location.href = "/vivaleveFRONT/crud/deletar_treino.html";
