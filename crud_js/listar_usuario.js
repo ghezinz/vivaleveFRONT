@@ -10,11 +10,18 @@ async function listarUsuarios() {
     message.textContent = ''; // Limpa mensagens anteriores
     usuariosTableBody.innerHTML = ''; // Limpa a tabela antes de adicionar novos dados
 
+    // Verifica se o token está disponível
+    if (!authToken) {
+        message.textContent = 'Erro: Token de autenticação não encontrado. Faça login novamente.';
+        return;
+    }
+
     try {
         const response = await fetch(apiUrl, {
             method: 'GET',
             headers: {
                 'Authorization': `Bearer ${authToken}`,
+                'Content-Type': 'application/json',
             },
         });
 
@@ -26,25 +33,27 @@ async function listarUsuarios() {
                 return;
             }
 
-            // Preenche a tabela com os dados dos usuários
+            // Preenche a tabela com os dados dos usuários (apenas nome, email e username)
             usuarios.forEach(usuario => {
                 const row = document.createElement('tr');
                 row.innerHTML = `
-                    <td>${usuario.id}</td>
                     <td>${usuario.nome}</td>
                     <td>${usuario.email}</td>
                     <td>${usuario.username}</td>
-                    <td><img src="${usuario.imagem}" alt="${usuario.nome}" width="50" height="50"></td>
                 `;
                 usuariosTableBody.appendChild(row);
             });
 
             document.getElementById('usuariosTable').style.display = 'table'; // Exibe a tabela
         } else {
-            message.textContent = 'Erro ao listar usuários. Verifique o token de autenticação.';
+            // Mensagem de erro detalhada
+            const errorMsg = `Erro ao listar usuários: ${response.status} - ${response.statusText}`;
+            console.error(errorMsg);
+            message.textContent = errorMsg;
         }
     } catch (error) {
         message.textContent = `Erro: ${error.message}`;
+        console.error("Erro na requisição:", error);
     }
 }
 
