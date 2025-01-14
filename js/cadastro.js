@@ -5,23 +5,17 @@ document.getElementById('formCadastro').addEventListener('submit', async functio
   const email = document.getElementById('email').value.trim();
   const username = document.getElementById('username').value.trim();
   const password = document.getElementById('senha').value;
-  const confirmPassword = document.getElementById('confirmarSenha').value;
   const mensagem = document.getElementById('mensagem');
 
   mensagem.textContent = '';
   mensagem.style.color = 'red';
 
-  if (password !== confirmPassword) {
-    mensagem.textContent = 'As senhas não coincidem!';
-    return;
-  }
-
+  // Monta o objeto de dados para envio
   const data = {
     name,
     email,
     username,
     password,
-    confirm_password: confirmPassword,
   };
 
   try {
