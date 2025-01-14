@@ -9,8 +9,9 @@ function DeletarUsuario() {
 }
 
 function voltarParaHome() {
-    window.location.href = "/vivaleveFRONT/crud/index.html";
-  }
+    window.location.href = "/vivaleveFRONT/index.html";
+}
+
 
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('user-form');
