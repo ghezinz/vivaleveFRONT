@@ -1,26 +1,27 @@
 document.getElementById('formCadastro').addEventListener('submit', async function (e) {
   e.preventDefault();
 
-  const nome = document.getElementById('nome').value.trim();
+  const name = document.getElementById('nome').value.trim();
   const email = document.getElementById('email').value.trim();
   const username = document.getElementById('username').value.trim();
-  const senha = document.getElementById('senha').value;
-  const confirmarSenha = document.getElementById('confirmarSenha').value;
+  const password = document.getElementById('senha').value;
+  const confirmPassword = document.getElementById('confirmarSenha').value;
   const mensagem = document.getElementById('mensagem');
 
   mensagem.textContent = '';
   mensagem.style.color = 'red';
 
-  if (senha !== confirmarSenha) {
+  if (password !== confirmPassword) {
     mensagem.textContent = 'As senhas não coincidem!';
     return;
   }
 
   const data = {
-    name: nome,
-    email: email,
-    username: username,
-    password: senha,
+    name,
+    email,
+    username,
+    password,
+    confirm_password: confirmPassword,
   };
 
   try {
@@ -38,9 +39,13 @@ document.getElementById('formCadastro').addEventListener('submit', async functio
       document.getElementById('formCadastro').reset();
     } else {
       const errorData = await response.json();
-      mensagem.textContent = `Erro ao cadastrar usuário: ${errorData.detail || 'Erro desconhecido'}`;
+      mensagem.textContent = `Erro ao cadastrar usuário: ${
+        errorData.detail || 'Erro desconhecido'
+      }`;
+      console.error('Detalhes do erro:', errorData);
     }
   } catch (error) {
     mensagem.textContent = `Erro: ${error.message}`;
+    console.error('Erro no cadastro:', error);
   }
 });
