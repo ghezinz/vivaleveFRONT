@@ -4,7 +4,7 @@ const usuariosTableBody = document.querySelector('#usuariosTable tbody');
 const message = document.getElementById('error-message');
 
 // Adicione o token ao cabeçalho
-const token = sessionStorage.getItem('authtoken');
+const token = localStorage.getItem('authtoken');
 
 listarUsuariosBtn.addEventListener('click', async () => {
     message.textContent = ''; // Limpa mensagens anteriores
