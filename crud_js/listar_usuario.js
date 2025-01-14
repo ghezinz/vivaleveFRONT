@@ -3,7 +3,7 @@ const usuariosTableBody = document.querySelector('#usuariosTable tbody');
 const message = document.getElementById('error-message');
 
 // Obtém o token do localStorage
-const token = localStorage.getItem('authToken');
+const authToken = localStorage.getItem('authToken');
 
 // Função para listar usuários
 async function listarUsuarios() {
@@ -14,7 +14,7 @@ async function listarUsuarios() {
         const response = await fetch(apiUrl, {
             method: 'GET',
             headers: {
-                'Authorization': `Bearer ${token}`,
+                'Authorization': `Bearer ${authToken}`,
             },
         });
 
