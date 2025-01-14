@@ -7,6 +7,7 @@ updateDietForm.addEventListener('submit', async (e) => {
     message.textContent = ''; // Limpa mensagens anteriores
 
     const dietaId = document.getElementById('dietaId').value.trim();
+    const dietaNome = document.getElementById('dietaNome').value.trim(); // Novo campo: Nome da Dieta
     const dietaTipo = document.getElementById('dietaTipo').value.trim();
     const dietaDescricao = document.getElementById('dietaDescricao').value.trim();
     const dietaCaloria = document.getElementById('dietaCaloria').value.trim();
@@ -17,25 +18,27 @@ updateDietForm.addEventListener('submit', async (e) => {
         return;
     }
 
-    const authToken = localStorage.getItem("authToken");
-    if (!authToken) {
-        alert("Você precisa estar logado para realizar esta ação.");
-        window.location.href = "login.html";
-        return;
-    }
-
+    // Criar objeto JSON com os campos preenchidos
     const dietaData = {
+        ...(dietaNome && { nome: dietaNome }), // Atualiza o nome da dieta
         ...(dietaTipo && { tipo: dietaTipo }),
         ...(dietaDescricao && { descricao: dietaDescricao }),
         ...(dietaCaloria && { consumo_caloria: parseInt(dietaCaloria) }),
     };
 
     try {
+        const authToken = localStorage.getItem('authToken');
+        if (!authToken) {
+            message.style.color = 'red';
+            message.textContent = 'Erro: Usuário não autenticado.';
+            return;
+        }
+
         const response = await fetch(`${apiUrl}/${dietaId}`, {
             method: 'PUT',
             headers: {
-                'Content-Type': 'application/json',
                 'Authorization': `Bearer ${authToken}`,
+                'Content-Type': 'application/json',
             },
             body: JSON.stringify(dietaData),
         });
