@@ -1,12 +1,12 @@
-const apiUrl = 'https://vivaleveapi.onrender.com/users/users'; // Substitua pela URL da sua API
-const listarUsuariosBtn = document.getElementById('listarUsuarios');
+const apiUrl = 'https://vivaleveapi.onrender.com/users/users'; // URL da API
 const usuariosTableBody = document.querySelector('#usuariosTable tbody');
 const message = document.getElementById('error-message');
 
-// Adicione o token ao cabeçalho
+// Obtém o token do localStorage
 const token = localStorage.getItem('authtoken');
 
-listarUsuariosBtn.addEventListener('click', async () => {
+// Função para listar usuários
+async function listarUsuarios() {
     message.textContent = ''; // Limpa mensagens anteriores
     usuariosTableBody.innerHTML = ''; // Limpa a tabela antes de adicionar novos dados
 
@@ -46,4 +46,7 @@ listarUsuariosBtn.addEventListener('click', async () => {
     } catch (error) {
         message.textContent = `Erro: ${error.message}`;
     }
-});
+}
+
+// Chama a função ao carregar a página
+document.addEventListener('DOMContentLoaded', listarUsuarios);

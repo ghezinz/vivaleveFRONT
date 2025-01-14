@@ -5,36 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Listar Usuários</title>
     <link rel="stylesheet" href="/vivaleveFRONT/administrador_css/crud.css">
-    <style>
-        table {
-            border-collapse: collapse;
-            width: 100%;
-            margin-top: 20px;
-        }
-
-        th, td {
-            border: 1px solid #ddd;
-            text-align: left;
-            padding: 8px;
-        }
-
-        th {
-            background-color: #f4f4f4;
-        }
-
-        #message {
-            margin-top: 10px;
-            color: red;
-        }
-    </style>
 </head>
 <body>
-    <h1>Listar Usuários</h1>
-    <div>
-        <button id="listarUsuarios">Listar Usuários</button>
-    </div>
-    <p id="message"></p> <!-- Mensagem de feedback -->
-    <table id="usuariosTable" style="display: none;">
+    <h1>Usuários Cadastrados</h1>
+    <p id="error-message" style="color: red;"></p>
+    <table id="usuariosTable" style="border-collapse: collapse; width: 100%; display: none;">
         <thead>
             <tr>
                 <th>ID</th>
@@ -44,11 +19,8 @@
                 <th>Imagem</th>
             </tr>
         </thead>
-        <tbody>
-            <!-- Os usuários serão adicionados dinamicamente aqui -->
-        </tbody>
+        <tbody></tbody>
     </table>
-    
-    <script src="/vivaleveFRONT/crud_js/listar_usuario.js" defer></script>
+    <script src="/vivaleveFRONT/crud_js/listar_usuarios.js"></script>
 </body>
 </html>
