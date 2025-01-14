@@ -22,8 +22,9 @@
             background-color: #f4f4f4;
         }
 
-        #error-message {
+        #message {
             margin-top: 10px;
+            color: red;
         }
     </style>
 </head>
@@ -32,7 +33,7 @@
     <div>
         <button id="listarUsuarios">Listar Usuários</button>
     </div>
-    <p id="message" style="color: red;"></p> <!-- Mensagem de feedback -->
+    <p id="message"></p> <!-- Mensagem de feedback -->
     <table id="usuariosTable" style="display: none;">
         <thead>
             <tr>
@@ -48,6 +49,6 @@
         </tbody>
     </table>
     
-    <script src="/vivaleveFRONT/crud_js/listar_usuario.js"></script>
+    <script src="/vivaleveFRONT/crud_js/listar_usuario.js" defer></script>
 </body>
 </html>
