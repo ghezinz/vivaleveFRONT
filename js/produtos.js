@@ -6,7 +6,6 @@ function voltarParaHome() {
 function carregarProdutos() {
     fetch("https://vivaleveapi.onrender.com/produtos/produtos", {
         method: "GET",
-        // Não há mais a necessidade de incluir o token, pois não requer autenticação
         headers: {
             "Content-Type": "application/json"
         }
@@ -25,9 +24,8 @@ function carregarProdutos() {
             produtoElement.classList.add("produto-card");
             produtoElement.innerHTML = `
                 <h3>${produto.nome}</h3>
-                <p>${produto.descricao}</p>
                 <p>Preço: R$ ${produto.preco.toFixed(2)}</p>
-                ${produto.img_url ? `<img src="${produto.img_url}" alt="Imagem do produto">` : ""}
+                <button onclick="comprarProduto('${produto.descricao}')">Comprar</button>
             `;
             container.appendChild(produtoElement);
         });
@@ -38,6 +36,15 @@ function carregarProdutos() {
     });
 }
 
+function comprarProduto(url) {
+    if (url.startsWith("http")) {
+        window.location.href = url;
+    } else {
+        alert("URL do produto inválida.");
+    }
+}
+
 document.addEventListener("DOMContentLoaded", carregarProdutos);
+
 
 
