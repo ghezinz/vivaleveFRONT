@@ -74,7 +74,7 @@ function favoritarDieta(dietaId) {
         return;
     }
 
-    fetch(`http://127.0.0.1:8000/favoritos/favoritos/dietas/${dietaId}`, {
+    fetch(`https://vivaleveapi.onrender.com/favoritos/favoritos/dietas/${dietaId}`, {
         method: "POST",
         headers: {
             "Authorization": `Bearer ${authToken}`,
