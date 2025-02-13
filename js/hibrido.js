@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
         return response.json();
     })
     .then(treinos => {
-        const treinosHibridos = treinos.filter(treino => treino.tipo === "híbrido");
+        const treinosHibridos = treinos.filter(treino => treino.tipo === "hibrido");
         const container = document.getElementById("hibridoContainer");
 
         if (treinosHibridos.length === 0) {
