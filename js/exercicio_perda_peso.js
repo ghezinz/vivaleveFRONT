@@ -54,7 +54,7 @@ function favoritarTreino(treinoId) {
         return;
     }
 
-    fetch(`http://127.0.0.1:8000/favoritos/favoritos/treinos/${treinoId}`, {
+    fetch(`https://vivaleveapi.onrender.com/favoritos/favoritos/treinos/${treinoId}`, {
         method: "POST",
         headers: {
             "Authorization": `Bearer ${authToken}`,
