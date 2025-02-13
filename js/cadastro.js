@@ -5,6 +5,7 @@ document.getElementById('formCadastro').addEventListener('submit', async functio
   const email = document.getElementById('email').value.trim();
   const username = document.getElementById('username').value.trim();
   const password = document.getElementById('senha').value;
+  const confirm_password = document.getElementById('confirmarSenha').value;
   const mensagem = document.getElementById('mensagem');
 
   mensagem.textContent = '';
@@ -16,6 +17,7 @@ document.getElementById('formCadastro').addEventListener('submit', async functio
     email,
     username,
     password,
+    confirm_password
   };
 
   try {
